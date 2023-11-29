@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Initiate Call and Enter Phone Number</title>
+</head>
+<body>
+    <h1>Initiate Call and Enter Phone Number</h1>
+    <form method="post" action="{% url 'initiate_and_enter' %}">
+        {% csrf_token %}
+        <label for="phone_number">Enter Phone Number:</label>
+        <input type="text" id="phone_number" name="phone_number" required>
+        <button type="submit">Initiate Call</button>
+    </form>
+</body>
+</html>
